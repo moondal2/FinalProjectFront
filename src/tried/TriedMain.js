@@ -168,7 +168,7 @@ const TriedMain = () => {
                     year={year} setYear={setYear}
                 />
                 <div id="tried-worldcup">
-                    <PlaygroundSpeedDial/>
+                    <PlaygroundSpeedDial  />
                 </div>
                 <div id="tried-write-btn">
                     <Button type='button' variant="contained" onClick={handlerWrite}>글쓰기</Button>

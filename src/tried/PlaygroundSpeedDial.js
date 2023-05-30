@@ -92,8 +92,8 @@ export default function PlaygroundSpeedDial() {
                 key={action.name}
                 // icon={action.icon}
                 icon={<img src={action.icon} alt={action.name} style={{ width: '30px', height: '30px'}}/>}
-                tooltipTitle={action.name}
-                tooltipOpen
+                // tooltipTitle={action.name}
+                // tooltipOpen
                 // onClick={() => {
                 //   handleClose();
                 // }}
