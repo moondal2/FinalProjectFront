@@ -1,0 +1,55 @@
+.triedDetail-comnt-each{
+  width: 100%;
+  margin-top:10px;
+  display: flex;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+}
+
+.triedDetail-comnt-userinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 13%;
+}
+
+.triedDetail-comnt-userimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+.triedDetail-comnt-userimg > img{
+  width: 30px;
+  object-fit: cover;
+}
+
+.triedDetail-comnt-usernick{
+  font-size: 0.8rem;
+}
+
+.triedDetail-comnt-etc{
+  width: 87%;
+}
+
+.triedDetail-comnt-cont{
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.triedDetail-comnt-time{
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.triedDetail-comnt-btns > svg{
+  width:18px;
+  cursor: pointer;
+}

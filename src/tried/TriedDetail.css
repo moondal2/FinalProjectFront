@@ -1,0 +1,96 @@
+.triedDetail-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#frm{
+  width: 50%;
+}
+
+.triedDetail-title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 3px 5px 3px;
+  /* margin-bottom: 5px; */
+}
+
+.triedDetail-writer{
+  margin: 5px;
+}
+
+.triedDetail-etc{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+  color: gray;
+  font-size: 0.9rem;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.triedDetail-etc > div{
+  /* margin-left: 10px; */
+  margin: 5px 3px;
+}
+
+.triedDetail-img{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.triedDetail-img > img{
+  /* width: 70%; */
+  width: 95%;
+  margin: 10px 0 20px;
+  object-fit: cover;
+}
+
+.triedDetail-content{
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  min-height: 150px;
+}
+
+.triedDetail-comnt-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.triedDetail-comnt-write{
+  width : 80%;
+}
+
+.triedDetail-btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 50%;
+  line-height: 40px;
+}
+
+.triedDetail-btns > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.triedDetail-nextCont-btn{
+  width: 72px;
+}
+
+
+.triedDetail-btns > div > button{
+  margin: 0 5px 0 5px;
+}

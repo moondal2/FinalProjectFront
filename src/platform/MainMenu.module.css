@@ -1,0 +1,105 @@
+.header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-top: 2px solid #5E8FCA;
+    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
+}
+
+.logo {
+    width: 150px;
+    height: 60px;
+}
+
+.logoImg{
+    width: 150px;
+    height: 60px;
+}
+
+.dropmenu {
+    display: flex;
+    justify-content: center;
+}
+
+.dropmenu ul {
+    list-style: none;
+    display: flex;
+    border-radius: 5px;
+}
+
+.dropmenu ul li .main {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0px 10px 0px 10px;
+    display: block;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+
+.dropmenu li {
+    width: 150px;
+}
+
+.dropmenu ul ul {
+    display: none;
+}
+
+.dropmenu ul li .main:hover {
+    border-bottom: 3px solid #5E8FCA;
+    box-sizing: border-box;
+
+}
+
+.dropmenu ul li:hover ul {
+    display: flex;
+    position: absolute;
+    left: 11%;
+    /* top: 72px; */
+    background-color: white;
+    width: 74%;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    align-items: center;
+    text-align: center;
+}
+
+
+.detail1 {
+    height: 50px;
+}
+
+.detail1Li {
+
+    color: #333;
+}
+
+.detail1Li a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.detail1Li a:hover {
+    color: #5E8FCA;
+    font-weight: 600;
+    border-bottom: 2px solid #5E8FCA;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width:900px) {
+    .dropmenu li {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .language {
+        font-size: 10px;
+    }
+}

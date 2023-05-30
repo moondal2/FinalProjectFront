@@ -1,0 +1,91 @@
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 5% 30px 5%;
+}
+
+#mobile-profile-title{
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right:5%;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+
+#mobile-profile {
+    display: grid;
+    margin-left : 15%;
+    margin-right : 20%;
+    margin-bottom: 50px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+
+#mobile-profile> img{
+    width:100px;
+    border-style: solid;
+    border-radius: 100%;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.modifier:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#mobile-profile-recent-list{
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+#mobile-profile-board-wrap{
+
+    border: 1px solid rgb(212, 212, 212);
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 20px;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+.mobile-profile-board-list{
+    margin-bottom: 20px;
+}
+
+.mobile-profile-board-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed gray;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.mobile-profile-board-cont{
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mobile-profile-board-cont:hover{
+    background-color: rgb(236, 236, 236);
+
+}
