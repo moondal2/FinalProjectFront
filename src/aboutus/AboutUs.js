@@ -1,15 +1,38 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AboutUs.css';
-import way from './img/way.gif'
-import run from './img/run.gif'
-import black from './img/black.jpg'
-import gang from './img/gang.gif'
-import bok from './img/bok.gif'
-import { Link } from 'react-router-dom';
+import Modal1 from './Modal1';
+import Modal2 from './Modal2';
+import Modal3 from './Modal3';
+import Modal4 from './Modal4';
+import accompany from './img/accompany.png';
+import idealreal from './img/idealreal.png';
+import course from './img/course.png';
+import tried from './img/tried.png';
 
 function AboutUs() {
     const sliderRef = useRef(null);
     const overflowRef = useRef(null);
+
+    const [modal1, setModal1] = useState(false);
+    const [modal2, setModal2] = useState(false);
+    const [modal3, setModal3] = useState(false);
+    const [modal4, setModal4] = useState(false);
+
+    const handlerModal1 = () => {
+        setModal1(true);
+    }
+
+    const handlerModal2 = () => {
+        setModal2(true);
+    }
+
+    const handlerModal3 = () => {
+        setModal3(true);
+    }
+
+    const handlerModal4 = () => {
+        setModal4(true);
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,34 +56,51 @@ function AboutUs() {
         };
     }, []);
 
+
     return (
         <>
-            <Link to="/">
-                <div className="pic" id="slider" ref={sliderRef}>
-                    <img src="https://blog.kakaocdn.net/dn/BLiDh/btrGt2jM9dx/MsTAf6D49dQD0Bjlbollok/img.jpg" alt="Slider" style={{ width: '50%', height: '50%', opacity: 0.5, borderRadius: '30%' }} />
-                    <div>인트로페이지를 한번 시도해 보았습니다<br />
-                        우리조 이름이 진짜 가자 인가요?<br />
-                        어딜 가죠?<br />
-                        화양사거리쪽에 <a href="https://www.goodchoice.kr/product/detail?ano=69527" target="_blank">de gaja</a>라는 곳이 있긴 한데....
-                    </div>
-                </div>
-                <div id="overflow" ref={overflowRef} >
-                    <div class="container">
-                        <img class="box" src={way} alt="Overflow" style={{ borderRadius: '20%' }} />
-                        <div class="box1">이렇게 하면은</div>
-                    </div>
-                    <div class="container">
-                        <img class="box3" src={run} alt="Overflow" style={{}} />
-                        <div class="box2">어떻게 나올까요</div>
-                    </div>
-                    <img src={gang} alt="Overflow" style={{ borderRadius: '10%' }} />
-                    <img src={black} alt="Overflow" style={{ width: 'auto', height: 'auto', borderRadius: '5%' }} />
-                    <img src={bok} alt="Overflow" style={{ borderRadius: '15%' }} />
-                </div>
-            </Link>
-        </>
+            <div className="background">
 
-    );
+                <img src={process.env.PUBLIC_URL + '/KADA-back.png'} />
+
+                <div className='shin-img' onClick={handlerModal1}>
+                    <img src={process.env.PUBLIC_URL + './신윤복 월하정인.png'} />
+                </div>
+                {modal1 &&
+                    <Modal1 setModal1={setModal1}>
+                        <img src={accompany} alt="Overflow" style={{ borderRadius: '10%' }} />
+                    </Modal1>
+                }
+
+                <div className='shin-img2' onClick={handlerModal2}>
+                    <img src={process.env.PUBLIC_URL + './김홍도 씨름.png'} />
+                </div>
+                {modal2 &&
+                    <Modal2 setModal2={setModal2}>
+                        <img src={tried} alt="Overflow" style={{ borderRadius: '10%' }} />
+                    </Modal2>
+                }
+
+                <div className='shin-img3' onClick={handlerModal3}>
+                    <img src={process.env.PUBLIC_URL + './김홍도 그림감상.png'} />
+                </div>
+                {modal3 &&
+                    <Modal3 setModal3={setModal3}>
+                        <img src={course} alt="Overflow" style={{ borderRadius: '10%' }} />
+                    </Modal3>
+                }
+
+                <div className='shin-img4' onClick={handlerModal4}>
+                    <img src={process.env.PUBLIC_URL + './송하맹호도.png'} />
+                </div>
+                {modal4 &&
+                    <Modal4 setModal4={setModal4}>
+                        <img src={idealreal} alt="Overflow" style={{ borderRadius: '10%' }} />
+                    </Modal4>
+                }
+            </div>
+        </>
+    )
 }
 
 export default AboutUs;

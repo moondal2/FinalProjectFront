@@ -1,56 +1,104 @@
-#slider{
+.background{
     width: 100%;
-    /* background-color: white; */
-    height: 100%;
-    position: fixed;
-    color: black;
-}
-#overflow{
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
+  }
+  
+  .background>img{
+    width:100%;
+    object-fit: cover;
+  }
+  
+  .shin-img{
     position: absolute;
-    /* background-color: blue; */
-    color: black;
-    top: 0;
-}
-.container {
+    z-index: 4;
+    right: 200px;
+    top: 2300px;
+    animation-name: shin-animation;
+    animation-duration: 0.3s;
+    transform-origin: bottom;
+  }
+  
+  .shin-img>img{
+    width:500px;
+    filter: drop-shadow(3px 5px 10px);
     
-}
-.box {
-    /* border: solid 10px red; */
-    border-radius: 30;
-    width: 60%;
-    height: 500px;
-    float: left;
-}
-.box1 {
-    /* border: solid 10px yellow; */
-    border-radius: 30;
-    width: 40%;
-    height: 300px;
-    float: right;
-    text-align: center;
-}
-.box2 {
-    /* border: solid 10px red; */
-    border-radius: 30;
-    width: 40%;
-    height: 300px;
-    float: left;
-    text-align: center;
-}
-.box3 {
-    /* border: solid 10px yellow; */
-    border-radius: 30;
-    width: 60%;
-    height: 500px;
-    /* float: right; */
-}
-.pic {
-    /* background-image: url("C:\Users\hi\JAVASCRIPT\LastProjectFront\src\aboutus\img/bum.gif"); */
-    background-repeat: no-repeat;
-    background-position : left center;
-    background-size: 100% 100%;
-    /* https://hianna.tistory.com/724 css참조 */
-    /* opacity: 0.5; 투명도 */
-}
+  }
+  
+  .shin-img>img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .shin-img2{
+    position: absolute;
+    z-index: 3;
+    left: 200px;
+    top: 2700px;
+    animation-name: shin-animation;
+    animation-duration: 0.3s;
+    transform-origin: bottom;
+  }
+  
+  .shin-img2>img{
+    width:500px;
+    filter: drop-shadow(3px 5px 10px);
+    
+  }
+  
+  .shin-img2>img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .shin-img3{
+    position: absolute;
+    z-index: 2;
+    right: 200px;
+    top: 4300px;
+    animation-name: shin-animation;
+    animation-duration: 0.3s;
+    transform-origin: bottom;
+  }
+  
+  .shin-img3>img{
+    width:500px;
+    filter: drop-shadow(3px 5px 10px);
+    
+  }
+  
+  .shin-img3>img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .shin-img4{
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 4500px;
+    animation-name: shin-animation;
+    animation-duration: 0.3s;
+    transform-origin: bottom;
+  }
+  
+  .shin-img4>img{
+    width:500px;
+    filter: drop-shadow(3px 5px 10px);
+    
+  }
+  
+  .shin-img4>img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  @keyframes shin-animation {
+    from {
+       opacity: 0;
+       transform: translate3d(0, 10%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }

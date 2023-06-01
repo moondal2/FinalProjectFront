@@ -45,6 +45,7 @@ import Winpage from './worldcup/Winpage';
 import Game1 from './worldcup/Game1';
 import Game2 from './worldcup/Game2';
 import Game3 from './worldcup/Game3';
+import Example from './aboutus/Example';
 
 function App() {
   return (
@@ -55,7 +56,7 @@ function App() {
         <Route path="/login"                          element={<LoginPage/>}       />
         <Route path="/regist"                         element={<Regist/>}          />
         <Route path="/regist/social/google"           element={<RegistGoogle/>}    />
-        <Route path="/aboutus"                        element={<AboutUs/>}         />
+        {/* <Route path="/aboutus"                        element={<AboutUs/>}         /> */}
         <Route path="/notice/:noticeIdx"              element={<NoticeDetail/>}    />
         <Route path="/notice/write"                   element={<NoticeWrite/>}     />
         <Route path="/noticeList"                     element={<Notice/>}          />
@@ -94,7 +95,8 @@ function App() {
         <Route path="/worldcup/1"                     element={<Game1/>}           />
         <Route path="/worldcup/2"                     element={<Game2/>}           />
         <Route path="/worldcup/3"                     element={<Game3/>}           />
-        <Route path="/winpage/:rawinfoIdx/:triedCategoryIdx" element={<Winpage/>} />
+        <Route path="/winpage/:rawinfoIdx/:triedCategoryIdx" element={<Winpage/>}  />
+        <Route path="/example"                        element={<Example/>}         />
         <Route path="/*"                              element={<NotFound/>}        />
       </Routes>
     </>
